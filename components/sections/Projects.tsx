@@ -88,7 +88,7 @@ const projects = [
       'One-click CSV export up to 100K rows',
     ],
     github: 'https://github.com/shubham000111222/real-time-sales-dashboard',
-    demo: null,
+    demo: 'https://real-time-sales-dashboard-rxhjichtxwswzwqgn7pncb.streamlit.app/',
   },
 ];
 

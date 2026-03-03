@@ -73,6 +73,23 @@ const projects = [
     github: 'https://github.com/shubham000111222/medical-classifier',
     demo: 'https://medai-demo.streamlit.app', // PLACEHOLDER
   },
+  {
+    title: 'Real-Time Sales Analytics Dashboard',
+    emoji: '📊',
+    problem:
+      'Sales teams had no live visibility into performance — reports were 24 hours stale, causing missed targets and reactive decisions.',
+    approach:
+      'Built an end-to-end data engineering pipeline: a simulated live transaction stream (Kafka-ready) feeds a FastAPI backend that persists data to PostgreSQL. A Streamlit dashboard renders live KPIs, regional heatmaps, product leaderboards, and a Prophet/ARIMA revenue forecast — all auto-refreshing every 30 seconds.',
+    stack: ['Python', 'FastAPI', 'PostgreSQL', 'Streamlit', 'Plotly', 'Seaborn', 'Prophet', 'ARIMA', 'Docker'],
+    results: [
+      'Live data stream at 2 TPS (Kafka-ready)',
+      'Prophet & ARIMA 30-day revenue forecast with 90% CI',
+      'Region × Category Seaborn heatmap',
+      'One-click CSV export up to 100K rows',
+    ],
+    github: 'https://github.com/shubham000111222/real-time-sales-dashboard',
+    demo: 'https://github.com/shubham000111222/real-time-sales-dashboard',
+  },
 ];
 
 function ProjectCard({

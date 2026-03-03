@@ -20,7 +20,7 @@ const projects = [
       '$1.2M annualized revenue protected',
     ],
     github: 'https://github.com/shubham000111222/churn-prediction',
-    demo: 'https://churn-demo.vercel.app', // PLACEHOLDER
+    demo: null,
   },
   {
     title: 'NLP-Powered Financial Sentiment Analyser',
@@ -37,7 +37,7 @@ const projects = [
       'Integrated with 3 live trading strategies',
     ],
     github: 'https://github.com/shubham000111222/financial-sentiment',
-    demo: 'https://sentiment-demo.vercel.app', // PLACEHOLDER
+    demo: null,
   },
   {
     title: 'Retail Demand Forecasting System',
@@ -54,7 +54,7 @@ const projects = [
       'Forecasts generated for 1,200 SKUs weekly',
     ],
     github: 'https://github.com/shubham000111222/demand-forecasting',
-    demo: 'https://forecast-demo.vercel.app', // PLACEHOLDER
+    demo: null,
   },
   {
     title: 'Multimodal Medical Image Classifier',
@@ -71,7 +71,7 @@ const projects = [
       'HIPAA-compliant data pipeline',
     ],
     github: 'https://github.com/shubham000111222/medical-classifier',
-    demo: 'https://medai-demo.streamlit.app', // PLACEHOLDER
+    demo: null,
   },
   {
     title: 'Real-Time Sales Analytics Dashboard',

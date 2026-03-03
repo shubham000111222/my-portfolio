@@ -71,7 +71,7 @@ const projects = [
       'HIPAA-compliant data pipeline',
     ],
     github: 'https://github.com/shubham000111222/medical-classifier',
-    demo: null,
+    demo: 'https://medical-classifier-nxsgzc3dekbyqef8kvc8w6.streamlit.app/',
   },
   {
     title: 'Real-Time Sales Analytics Dashboard',

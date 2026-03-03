@@ -19,7 +19,7 @@ const projects = [
       'Real-time inference < 50ms',
       '$1.2M annualized revenue protected',
     ],
-    github: 'https://github.com/yourusername/churn-prediction', // PLACEHOLDER
+    github: 'https://github.com/shubham000111222/churn-prediction',
     demo: 'https://churn-demo.vercel.app', // PLACEHOLDER
   },
   {
@@ -36,7 +36,7 @@ const projects = [
       'Coverage of 500+ tickers simultaneously',
       'Integrated with 3 live trading strategies',
     ],
-    github: 'https://github.com/yourusername/financial-sentiment', // PLACEHOLDER
+    github: 'https://github.com/shubham000111222/financial-sentiment',
     demo: 'https://sentiment-demo.vercel.app', // PLACEHOLDER
   },
   {
@@ -53,7 +53,7 @@ const projects = [
       '$340K annual inventory savings',
       'Forecasts generated for 1,200 SKUs weekly',
     ],
-    github: 'https://github.com/yourusername/demand-forecasting', // PLACEHOLDER
+    github: 'https://github.com/shubham000111222/demand-forecasting',
     demo: 'https://forecast-demo.vercel.app', // PLACEHOLDER
   },
   {
@@ -70,7 +70,7 @@ const projects = [
       'Grad-CAM heatmaps for radiologist review',
       'HIPAA-compliant data pipeline',
     ],
-    github: 'https://github.com/yourusername/medical-classifier', // PLACEHOLDER
+    github: 'https://github.com/shubham000111222/medical-classifier',
     demo: 'https://medai-demo.streamlit.app', // PLACEHOLDER
   },
 ];

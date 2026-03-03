@@ -37,7 +37,7 @@ const projects = [
       'Integrated with 3 live trading strategies',
     ],
     github: 'https://github.com/shubham000111222/financial-sentiment',
-    demo: null,
+    demo: 'https://financial-sentiment-94rstxb2smxghvvjnbj7jp.streamlit.app/',
   },
   {
     title: 'Retail Demand Forecasting System',

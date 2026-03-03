@@ -20,7 +20,7 @@ const projects = [
       '$1.2M annualized revenue protected',
     ],
     github: 'https://github.com/shubham000111222/churn-prediction',
-    demo: null,
+    demo: 'https://churn-prediction-grph4xyczphtcaaqfwdh3d.streamlit.app/',
   },
   {
     title: 'NLP-Powered Financial Sentiment Analyser',

@@ -61,40 +61,18 @@ const certifications = [
   },
 ];
 
-const achievements = [
-  { label: 'Top 5% on Kaggle', icon: '🏆' },
-  { label: '3x Hackathon Winner', icon: '⚡' },
-  { label: 'Published Research Paper', icon: '📄' },
-  { label: 'Open Source Contributor', icon: '🌐' },
-];
+
 
 export function Certifications() {
   return (
     <section id="certifications" className="py-24 max-w-6xl mx-auto px-4 sm:px-6">
       <div className="mb-16 text-center">
         <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-          Certifications &amp; <span className="gradient-text">Achievements</span>
+          <span className="gradient-text">Certifications</span>
         </h2>
         <p className="text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
-          Verified credentials from industry-leading platforms, reflecting continuous upskilling.
+          Verified credentials from industry-leading platforms.
         </p>
-      </div>
-
-      {/* Achievements */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-14">
-        {achievements.map((a, i) => (
-          <motion.div
-            key={a.label}
-            initial={{ opacity: 0, scale: 0.85 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="glass rounded-2xl p-4 text-center border border-white/10"
-          >
-            <div className="text-3xl mb-2">{a.icon}</div>
-            <p className="text-sm font-semibold text-gray-700 dark:text-gray-200">{a.label}</p>
-          </motion.div>
-        ))}
       </div>
 
       {/* Certifications grid */}

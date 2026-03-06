@@ -69,26 +69,24 @@ export function About() {
             <h3 className="text-xl font-bold text-indigo-500 mb-2">Professional Summary</h3>
             {/* PLACEHOLDER: Replace with your actual professional summary */}
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              I&apos;m a Data Science &amp; AI student with hands-on experience in end-to-end
-              machine learning pipelines, statistical modelling, and business intelligence
-              solutions. I thrive at the intersection of engineering and analytics — where
-              rigorous experimentation meets production-grade deployment.
+              I&apos;m a B.Tech Computer Science student with hands-on experience building
+              end-to-end ML pipelines, NLP systems, and data analytics solutions. I enjoy
+              working across the full stack — from data ingestion and feature engineering
+              to model training and deployment.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              I have worked on real-world datasets spanning finance, healthcare, and e-commerce,
-              building models that reduced churn by 23%, improved forecast accuracy by 18%,
-              and automated reporting workflows saving 10+ hours per week.
+              I&apos;ve worked on projects spanning NLP, computer vision, time-series
+              forecasting, and tabular ML using datasets from finance, healthcare, and retail.
+              All projects are open-source with live demos.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              My goal: land an impactful role where data drives decisions at scale — whether as a
-              Data Scientist, Data Analyst, ML Engineer, or AI Engineer.
+              Seeking a Data Science / ML internship where I can apply these skills to
+              real-world problems.
             </p>
 
             <div className="pt-4 grid grid-cols-2 gap-4">
               {[
-                { label: 'Projects Completed', value: '20+' },
-                { label: 'ML Models Deployed', value: '8+' },
-                { label: 'Datasets Analyzed', value: '50+' },
+                { label: 'Projects', value: '6' },
                 { label: 'Certifications', value: '6' },
               ].map((stat) => (
                 <div key={stat.label} className="glass rounded-xl p-4 text-center">

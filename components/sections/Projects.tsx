@@ -123,7 +123,41 @@ const projects = [
       'Skill heatmap, radar chart, and CSV export',
     ],
     github: 'https://github.com/shubham000111222/resume-screening',
-    demo: null,
+    demo: 'https://shubh10099-resume-screening.hf.space',
+  },
+  {
+    title: 'AI Mock Interviewer',
+    emoji: '🎙️',
+    problem:
+      'Students preparing for data science roles had no personalised, on-demand tool to practice interviews — generic Q&A banks give no feedback on delivery or confidence.',
+    approach:
+      'Built a full interview pipeline: user uploads a job description → GPT-4o-mini / Llama 3 generates role-specific Technical, Behavioral, and Situational questions → candidate records or types answers → OpenAI Whisper transcribes audio → librosa extracts acoustic features (pitch, pause ratio, energy) → a dual feedback engine scores content quality (A–F, keyword hits, STAR structure) and confidence (5-dimensional radar) separately.',
+    stack: ['Python', 'Whisper', 'GPT-4o-mini', 'Llama 3', 'librosa', 'Streamlit', 'Plotly', 'Docker'],
+    results: [
+      'Role-specific questions in <5 sec (GPT) or offline (mock)',
+      'Confidence score from 5 acoustic + linguistic dimensions',
+      'Content graded A–F with keyword gap analysis',
+      'Downloadable JSON interview report',
+    ],
+    github: 'https://github.com/shubham000111222/ai-mock-interviewer',
+    demo: 'https://shubh10099-ai-mock-interviewer.hf.space',
+  },
+  {
+    title: 'Real-Time Cricket Analytics Dashboard',
+    emoji: '🏏',
+    problem:
+      'Cricket fans and analysts had no lightweight, open tool to track live IPL win probability ball-by-ball with rich visual analytics — existing platforms are paywalled or data-poor.',
+    approach:
+      'Built a ball-by-ball IPL simulation engine with realistic outcome distributions and full scorer. Trained a Logistic Regression win-probability model on 3,000 simulated innings using 10 engineered features (CRR, RRR, wickets-in-hand, pressure index, etc.). Rendered 7 live-updating Plotly charts: win probability, run-rate comparison, batting worm, wagon wheel, over breakdown, batter scorecard, and bowler figures. Pluggable CricAPI backend for real match data.',
+    stack: ['Python', 'scikit-learn', 'Streamlit', 'Plotly', 'Pandas', 'NumPy', 'CricAPI', 'Docker'],
+    results: [
+      'ML win probability updating every ball',
+      '7 interactive Plotly charts in a single dashboard',
+      'Full two-innings simulation with match result',
+      'Zero-config offline mode + CricAPI live feed',
+    ],
+    github: 'https://github.com/shubham000111222/cricket-analytics',
+    demo: 'https://shubh10099-cricket-analytics.hf.space',
   },
 ];
 

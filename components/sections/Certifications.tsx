@@ -3,32 +3,13 @@
 import { motion } from 'framer-motion';
 import { HiExternalLink, HiBadgeCheck } from 'react-icons/hi';
 
-// PLACEHOLDER: Replace with your actual certifications
 const certifications = [
-  {
-    title: 'AWS Certified Machine Learning – Specialty',
-    issuer: 'Amazon Web Services',
-    date: 'Oct 2024',
-    credentialId: 'AWS-ML-XXXXXX', // PLACEHOLDER
-    link: '#', // PLACEHOLDER: Add credential URL
-    badge: '☁️',
-    color: 'from-orange-500/20 to-amber-500/10 border-orange-500/20',
-  },
-  {
-    title: 'TensorFlow Developer Certificate',
-    issuer: 'Google',
-    date: 'Jul 2024',
-    credentialId: 'TF-XXXXXX', // PLACEHOLDER
-    link: '#', // PLACEHOLDER
-    badge: '🧠',
-    color: 'from-blue-500/20 to-cyan-500/10 border-blue-500/20',
-  },
   {
     title: 'Google Data Analytics Professional Certificate',
     issuer: 'Google / Coursera',
     date: 'Mar 2024',
-    credentialId: 'GDAC-XXXXXX', // PLACEHOLDER
-    link: '#', // PLACEHOLDER
+    credentialId: 'GDAC-XXXXXX',
+    link: '#',
     badge: '📊',
     color: 'from-green-500/20 to-teal-500/10 border-green-500/20',
   },
@@ -36,8 +17,8 @@ const certifications = [
     title: 'IBM Data Science Professional Certificate',
     issuer: 'IBM / Coursera',
     date: 'Jan 2024',
-    credentialId: 'IBM-DS-XXXXXX', // PLACEHOLDER
-    link: '#', // PLACEHOLDER
+    credentialId: 'IBM-DS-XXXXXX',
+    link: '#',
     badge: '🔵',
     color: 'from-indigo-500/20 to-violet-500/10 border-indigo-500/20',
   },
@@ -45,56 +26,25 @@ const certifications = [
     title: 'Deep Learning Specialization',
     issuer: 'DeepLearning.AI / Coursera',
     date: 'Sep 2023',
-    credentialId: 'DL-XXXXXX', // PLACEHOLDER
-    link: '#', // PLACEHOLDER
+    credentialId: 'DL-XXXXXX',
+    link: '#',
     badge: '🤖',
     color: 'from-violet-500/20 to-purple-500/10 border-violet-500/20',
   },
-  {
-    title: 'Microsoft Power BI Data Analyst Associate',
-    issuer: 'Microsoft',
-    date: 'Jun 2023',
-    credentialId: 'PBI-XXXXXX', // PLACEHOLDER
-    link: '#', // PLACEHOLDER
-    badge: '📈',
-    color: 'from-yellow-500/20 to-amber-500/10 border-yellow-500/20',
-  },
 ];
 
-const achievements = [
-  { label: 'Top 5% on Kaggle', icon: '🏆' },
-  { label: '3x Hackathon Winner', icon: '⚡' },
-  { label: 'Published Research Paper', icon: '📄' },
-  { label: 'Open Source Contributor', icon: '🌐' },
-];
+
 
 export function Certifications() {
   return (
     <section id="certifications" className="py-24 max-w-6xl mx-auto px-4 sm:px-6">
       <div className="mb-16 text-center">
         <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-          Certifications &amp; <span className="gradient-text">Achievements</span>
+          <span className="gradient-text">Certifications</span>
         </h2>
         <p className="text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
-          Verified credentials from industry-leading platforms, reflecting continuous upskilling.
+          Verified credentials from industry-leading platforms.
         </p>
-      </div>
-
-      {/* Achievements */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-14">
-        {achievements.map((a, i) => (
-          <motion.div
-            key={a.label}
-            initial={{ opacity: 0, scale: 0.85 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="glass rounded-2xl p-4 text-center border border-white/10"
-          >
-            <div className="text-3xl mb-2">{a.icon}</div>
-            <p className="text-sm font-semibold text-gray-700 dark:text-gray-200">{a.label}</p>
-          </motion.div>
-        ))}
       </div>
 
       {/* Certifications grid */}

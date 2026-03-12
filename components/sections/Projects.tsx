@@ -91,6 +91,24 @@ const projects = [
     demo: 'https://real-time-sales-dashboard-rxhjichtxwswzwqgn7pncb.streamlit.app/',
   },
   {
+    title: 'Stock Portfolio Analytics Dashboard',
+    emoji: '📈',
+    problem:
+      'Individual investors and financial advisors lacked a unified platform to analyze portfolio performance, risk metrics, and compare against market benchmarks in real-time.',
+    approach:
+      'Built a comprehensive Streamlit dashboard that fetches live stock data via yfinance. Implemented advanced analytics: Sharpe ratio, max drawdown, rolling volatility, correlation matrices, and factor analysis (alpha, beta). Added Monte Carlo simulations, attribution analysis, and PDF report generation for professional portfolio tracking.',
+    stack: ['Python', 'Streamlit', 'Pandas', 'NumPy', 'Plotly', 'yfinance', 'ReportLab'],
+    results: [
+      'Real-time portfolio metrics from Yahoo Finance',
+      'Multi-asset benchmark comparison (SPY, QQQ, etc.)',
+      'Interactive Plotly visualizations with rolling analytics',
+      'PDF report export for advisor presentations',
+      'Factor & beta analytics page for advanced users',
+    ],
+    github: 'https://github.com/shubham000111222/stock-portfolio-analytics',
+    demo: 'https://stock-portfolio-analytics-5ustsrbxfa4aqzcmnehqwt.streamlit.app',
+  },
+  {
     title: 'ResumeRank AI — Resume Screening System',
     emoji: '🎯',
     problem:

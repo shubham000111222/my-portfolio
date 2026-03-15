@@ -3,21 +3,20 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
-// PLACEHOLDER: Replace with your actual projects
 const projects = [
   {
     title: 'Customer Churn Prediction Engine',
     emoji: '🔮',
     problem:
-      'A SaaS company was losing 12% of customers monthly with no early-warning system in place.',
+      'Telecom customers churn with little warning — retention teams have no way to intervene before it happens.',
     approach:
-      'Conducted feature engineering on 3M+ records. Built an ensemble model (XGBoost + LightGBM) with SHAP-based explainability. Deployed via FastAPI with a real-time scoring endpoint.',
+      'Conducted feature engineering on a public telecom churn dataset. Built an ensemble model (XGBoost + LightGBM) with SHAP-based explainability to surface top churn drivers. Deployed via FastAPI with a real-time scoring endpoint.',
     stack: ['Python', 'XGBoost', 'LightGBM', 'SHAP', 'FastAPI', 'PostgreSQL', 'Docker'],
     results: [
-      '23% reduction in monthly churn',
-      'Model AUC: 0.94',
-      'Real-time inference < 50ms',
-      '$1.2M annualized revenue protected',
+      'Model AUC: 0.94 on held-out test set',
+      'Real-time inference < 50ms via FastAPI',
+      'SHAP waterfall plots for per-customer explainability',
+      'Dockerised and deployable end-to-end',
     ],
     github: 'https://github.com/shubham000111222/churn-prediction',
     demo: 'https://churn-prediction-grph4xyczphtcaaqfwdh3d.streamlit.app/',
@@ -26,15 +25,15 @@ const projects = [
     title: 'NLP-Powered Financial Sentiment Analyser',
     emoji: '📰',
     problem:
-      'Investment teams spent 4+ hours daily manually reading financial news to gauge market sentiment.',
+      'Manually tracking sentiment across hundreds of financial news headlines is slow and inconsistent.',
     approach:
-      'Fine-tuned FinBERT on 80K labelled financial headlines. Built an automated ETL pipeline pulling from major news APIs. Integrated sentiment scores into a live Tableau dashboard.',
+      'Fine-tuned FinBERT on a labelled financial headlines dataset (Financial PhraseBank). Built an automated pipeline to fetch and score headlines. Integrated sentiment scores into a live Tableau dashboard.',
     stack: ['Python', 'HuggingFace Transformers', 'FinBERT', 'Airflow', 'PostgreSQL', 'Tableau'],
     results: [
-      '87% sentiment classification accuracy',
-      '4 hours/day analyst time saved',
-      'Coverage of 500+ tickers simultaneously',
-      'Integrated with 3 live trading strategies',
+      '87% sentiment classification accuracy on test set',
+      'Automated pipeline replacing manual headline review',
+      'Live dashboard covering 500+ tickers',
+      'End-to-end from raw news feed to visual insight',
     ],
     github: 'https://github.com/shubham000111222/financial-sentiment',
     demo: 'https://financial-sentiment-94rstxb2smxghvvjnbj7jp.streamlit.app/',
@@ -43,15 +42,15 @@ const projects = [
     title: 'Retail Demand Forecasting System',
     emoji: '📦',
     problem:
-      'A retail chain had 18% stockout rate on top SKUs and $800K in excess inventory costs annually.',
+      'Retail stockout and overstock problems are hard to anticipate using simple historical averages.',
     approach:
-      'Implemented Prophet + LSTM hybrid forecasting on 2 years of sales data. Added external regressors (promotions, holidays, weather). Automated weekly retraining via Airflow DAG.',
+      'Implemented a Prophet + LSTM hybrid forecasting model on a public retail sales dataset (Kaggle Store Sales). Added external regressors for promotions and holidays. Automated weekly retraining via an Airflow DAG.',
     stack: ['Python', 'Prophet', 'LSTM', 'Keras', 'Apache Airflow', 'BigQuery', 'Looker'],
     results: [
-      '18% → 6% stockout rate',
-      'MAPE reduced from 22% to 9%',
-      '$340K annual inventory savings',
-      'Forecasts generated for 1,200 SKUs weekly',
+      'MAPE reduced from 22% to 9% vs baseline',
+      'Forecasts generated for 1,200 simulated SKUs',
+      'Automated weekly retraining pipeline',
+      'External regressors (holidays, promotions) improve accuracy',
     ],
     github: 'https://github.com/shubham000111222/demand-forecasting',
     demo: 'https://demand-forecasting-gzyokdmynnlsqdgibsfqwr.streamlit.app/',
@@ -60,15 +59,15 @@ const projects = [
     title: 'Multimodal Medical Image Classifier',
     emoji: '🏥',
     problem:
-      'Radiologists had a 6-day backlog for chest X-ray preliminary screening in rural clinics.',
+      'Chest X-ray screening requires expert radiologist time — automation could help triage and prioritise cases.',
     approach:
-      'Fine-tuned EfficientNet-B4 on the NIH ChestX-ray14 dataset. Applied Grad-CAM for visual explainability. Built a FastAPI + Streamlit interface for clinical staff.',
+      'Fine-tuned EfficientNet-B4 on the publicly available NIH ChestX-ray14 dataset. Applied Grad-CAM for visual explainability. Built a FastAPI + Streamlit interface to demonstrate clinical usability.',
     stack: ['Python', 'PyTorch', 'EfficientNet', 'Grad-CAM', 'FastAPI', 'Streamlit', 'AWS S3'],
     results: [
-      '91.2% classification accuracy (14 conditions)',
-      '6-day → same-day preliminary screening',
-      'Grad-CAM heatmaps for radiologist review',
-      'HIPAA-compliant data pipeline',
+      '91.2% classification accuracy across 14 conditions',
+      'Grad-CAM heatmaps for model interpretability',
+      'Interactive Streamlit demo for clinician review',
+      'Trained on NIH ChestX-ray14 (public dataset)',
     ],
     github: 'https://github.com/shubham000111222/medical-classifier',
     demo: 'https://medical-classifier-nxsgzc3dekbyqef8kvc8w6.streamlit.app/',
@@ -77,14 +76,14 @@ const projects = [
     title: 'Real-Time Sales Analytics Dashboard',
     emoji: '📊',
     problem:
-      'Sales teams had no live visibility into performance — reports were 24 hours stale, causing missed targets and reactive decisions.',
+      'Sales teams often rely on stale daily reports — a live dashboard enables faster, data-driven decisions.',
     approach:
-      'Built an end-to-end data engineering pipeline: a simulated live transaction stream (Kafka-ready) feeds a FastAPI backend that persists data to PostgreSQL. A Streamlit dashboard renders live KPIs, regional heatmaps, product leaderboards, and a Prophet/ARIMA revenue forecast — all auto-refreshing every 30 seconds.',
+      'Built an end-to-end pipeline: a simulated live transaction stream feeds a FastAPI backend persisting to PostgreSQL. A Streamlit dashboard renders live KPIs, regional heatmaps, product leaderboards, and a Prophet/ARIMA revenue forecast — auto-refreshing every 30 seconds.',
     stack: ['Python', 'FastAPI', 'PostgreSQL', 'Streamlit', 'Plotly', 'Seaborn', 'Prophet', 'ARIMA', 'Docker'],
     results: [
-      'Live data stream at 2 TPS (Kafka-ready)',
+      'Simulated live data stream at 2 TPS (Kafka-ready architecture)',
       'Prophet & ARIMA 30-day revenue forecast with 90% CI',
-      'Region × Category Seaborn heatmap',
+      'Region × Category heatmap for drill-down analysis',
       'One-click CSV export up to 100K rows',
     ],
     github: 'https://github.com/shubham000111222/real-time-sales-dashboard',
@@ -94,14 +93,14 @@ const projects = [
     title: 'ResumeRank AI — Resume Screening System',
     emoji: '🎯',
     problem:
-      'HR teams manually screened hundreds of resumes per role, taking 8+ hours and introducing unconscious bias.',
+      'Manually shortlisting resumes from a large applicant pool is time-consuming and inconsistent.',
     approach:
-      'Built an end-to-end NLP pipeline: PDF/DOCX extraction → NLTK preprocessing → TF-IDF + BERT (all-MiniLM-L6-v2) embeddings → cosine similarity ranking. Added spaCy NER skill extraction against an 80+ skill taxonomy with configurable composite scoring.',
+      'Built an NLP pipeline: PDF/DOCX extraction → NLTK preprocessing → TF-IDF + BERT (all-MiniLM-L6-v2) embeddings → cosine similarity ranking. Added spaCy NER skill extraction against an 80+ skill taxonomy with configurable composite scoring.',
     stack: ['Python', 'Sentence-Transformers', 'BERT', 'TF-IDF', 'spaCy', 'NLTK', 'Streamlit', 'Docker'],
     results: [
       'BERT + TF-IDF ensemble ranking with configurable weights',
       '80+ skills extracted across 7 categories via NER',
-      'Precision@K, MRR, NDCG@K evaluation metrics',
+      'Evaluated with Precision@K, MRR, and NDCG@K metrics',
       'Skill heatmap, radar chart, and CSV export',
     ],
     github: 'https://github.com/shubham000111222/resume-screening',
@@ -111,13 +110,13 @@ const projects = [
     title: 'AI Mock Interviewer',
     emoji: '🎙️',
     problem:
-      'Students preparing for data science roles had no personalised, on-demand tool to practice interviews — generic Q&A banks give no feedback on delivery or confidence.',
+      'Candidates preparing for data science roles lack access to personalised, on-demand interview practice with real feedback.',
     approach:
-      'Built a full interview pipeline: user uploads a job description → GPT-4o-mini / Llama 3 generates role-specific Technical, Behavioral, and Situational questions → candidate records or types answers → OpenAI Whisper transcribes audio → librosa extracts acoustic features (pitch, pause ratio, energy) → a dual feedback engine scores content quality (A–F, keyword hits, STAR structure) and confidence (5-dimensional radar) separately.',
+      'Built a full interview pipeline: user uploads a job description → GPT-4o-mini / Llama 3 generates role-specific questions → candidate records or types answers → OpenAI Whisper transcribes audio → librosa extracts acoustic features → a dual feedback engine scores content quality and confidence separately.',
     stack: ['Python', 'Whisper', 'GPT-4o-mini', 'Llama 3', 'librosa', 'Streamlit', 'Plotly', 'Docker'],
     results: [
-      'Role-specific questions in <5 sec (GPT) or offline (mock)',
-      'Confidence score from 5 acoustic + linguistic dimensions',
+      'Role-specific questions generated in <5 sec via GPT or offline via mock mode',
+      'Confidence scored across 5 acoustic + linguistic dimensions',
       'Content graded A–F with keyword gap analysis',
       'Downloadable JSON interview report',
     ],
@@ -128,15 +127,15 @@ const projects = [
     title: 'Real-Time Cricket Analytics Dashboard',
     emoji: '🏏',
     problem:
-      'Cricket fans and analysts had no lightweight, open tool to track live IPL win probability ball-by-ball with rich visual analytics — existing platforms are paywalled or data-poor.',
+      'Cricket fans and analysts lack a lightweight, open tool for ball-by-ball win probability and rich visual analytics.',
     approach:
-      'Built a ball-by-ball IPL simulation engine with realistic outcome distributions and full scorer. Trained a Logistic Regression win-probability model on 3,000 simulated innings using 10 engineered features (CRR, RRR, wickets-in-hand, pressure index, etc.). Rendered 7 live-updating Plotly charts: win probability, run-rate comparison, batting worm, wagon wheel, over breakdown, batter scorecard, and bowler figures. Pluggable CricAPI backend for real match data.',
+      'Built a ball-by-ball IPL simulation engine with realistic outcome distributions. Trained a Logistic Regression win-probability model on 3,000 simulated innings using 10 engineered features (CRR, RRR, wickets-in-hand, pressure index, etc.). Pluggable CricAPI backend for real match data.',
     stack: ['Python', 'scikit-learn', 'Streamlit', 'Plotly', 'Pandas', 'NumPy', 'CricAPI', 'Docker'],
     results: [
-      'ML win probability updating every ball',
+      'ML win probability model updating every ball',
       '7 interactive Plotly charts in a single dashboard',
       'Full two-innings simulation with match result',
-      'Zero-config offline mode + CricAPI live feed',
+      'Zero-config offline mode + CricAPI live feed support',
     ],
     github: 'https://github.com/shubham000111222/cricket-analytics',
     demo: 'https://shubh10099-cricket-analytics.hf.space',

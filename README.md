@@ -1,5 +1,6 @@
 # Data Science Portfolio — Next.js
 
+
 > A modern, production-level portfolio website for a Data Science & AI student.
 
 **Tech Stack:** Next.js 16 · React · TailwindCSS · Framer Motion · next-themes · TypeScript

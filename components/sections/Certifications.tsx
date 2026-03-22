@@ -54,14 +54,7 @@ export function Certifications() {
             </div>
             <div className="flex items-center justify-between mt-auto pt-2 border-t border-white/10">
               <span className="text-xs text-gray-500 dark:text-gray-400">{cert.date}</span>
-              
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors"
-              >
-                {'Verify'} <HiExternalLink size={12} />
-              </a>
+              <a href={cert.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors">Verify <HiExternalLink size={12} /></a>
             </div>
           </motion.div>
         ))}

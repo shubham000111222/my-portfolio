@@ -9,18 +9,17 @@ const skills = [
   { name: 'Deep Learning / NLP', level: 82, color: 'from-purple-500 to-pink-500' },
   { name: 'SQL & Data Engineering', level: 88, color: 'from-cyan-500 to-teal-500' },
   { name: 'Data Visualization', level: 85, color: 'from-teal-500 to-green-500' },
-  { name: 'Cloud (AWS / GCP)', level: 75, color: 'from-orange-500 to-amber-500' },
   { name: 'MLOps & Deployment', level: 78, color: 'from-rose-500 to-red-500' },
   { name: 'Statistical Analysis', level: 87, color: 'from-indigo-400 to-sky-500' },
 ];
 
 const toolBadges = [
-  { category: 'Languages', items: ['Python', 'R', 'SQL', 'JavaScript', 'Bash'] },
-  { category: 'ML Frameworks', items: ['Scikit-learn', 'XGBoost', 'LightGBM', 'TensorFlow', 'PyTorch', 'Keras'] },
-  { category: 'NLP & LLMs', items: ['HuggingFace', 'LangChain', 'spaCy', 'NLTK', 'OpenAI API'] },
-  { category: 'Data Stack', items: ['Pandas', 'NumPy', 'Polars', 'Spark', 'dbt', 'Airflow'] },
-  { category: 'Visualization', items: ['Matplotlib', 'Seaborn', 'Plotly', 'Tableau', 'Power BI', 'Looker'] },
-  { category: 'Cloud & MLOps', items: ['AWS', 'GCP', 'Docker', 'MLflow', 'FastAPI', 'Streamlit'] },
+  { category: 'Languages', items: ['Python', 'SQL'] },
+  { category: 'ML / DL', items: ['Scikit-learn', 'XGBoost', 'LightGBM', 'PyTorch', 'Keras', 'SHAP', 'EfficientNet'] },
+  { category: 'NLP & LLMs', items: ['HuggingFace Transformers', 'FinBERT', 'spaCy', 'NLTK'] },
+  { category: 'Data Stack', items: ['Pandas', 'NumPy'] },
+  { category: 'Visualisation', items: ['Streamlit', 'Plotly', 'Seaborn', 'Matplotlib'] },
+  { category: 'MLOps & Deployment', items: ['Docker', 'FastAPI', 'PostgreSQL', 'Streamlit Cloud', 'HuggingFace Spaces', 'Vercel'] },
 ];
 
 function SkillBar({ skill, i }: { skill: (typeof skills)[0]; i: number }) {
@@ -54,12 +53,11 @@ export function Skills() {
             Technical <span className="gradient-text">Skills</span>
           </h2>
           <p className="text-gray-500 dark:text-gray-400 max-w-xl mx-auto leading-relaxed">
-            A comprehensive toolkit built through projects, internships, and continuous learning.
+            A toolkit built through hands-on projects and continuous learning.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          {/* Progress bars */}
           <div className="space-y-5">
             <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-6">Proficiency Levels</h3>
             {skills.map((skill, i) => (
@@ -67,7 +65,6 @@ export function Skills() {
             ))}
           </div>
 
-          {/* Tool badges */}
           <div className="space-y-6">
             <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-6">Tools &amp; Technologies</h3>
             {toolBadges.map((cat) => (

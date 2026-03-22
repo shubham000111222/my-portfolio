@@ -60,7 +60,7 @@ export function Certifications() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors"
               >
-                Verify <HiExternalLink size={12} />
+                {'Verify'} <HiExternalLink size={12} />
               </a>
             </div>
           </motion.div>

@@ -1,39 +1,25 @@
 'use client';
-
 import { motion } from 'framer-motion';
 import { HiExternalLink, HiBadgeCheck } from 'react-icons/hi';
 
 const certifications = [
   {
-    title: 'Google Data Analytics Professional Certificate',
-    issuer: 'Google / Coursera',
-    date: 'Mar 2024',
-    credentialId: 'GDAC-XXXXXX',
-    link: '#',
+    title: 'Introduction to Data Science',
+    issuer: 'Cisco',
+    date: 'Sep 2025',
+    link: 'https://drive.google.com/file/d/1xJLWebe5y8UuHtcA96Vn_UkYC0MSZIh5/view?usp=drive_link',
     badge: '📊',
-    color: 'from-green-500/20 to-teal-500/10 border-green-500/20',
+    color: 'from-blue-500/20 to-cyan-500/10 border-blue-500/20',
   },
   {
-    title: 'IBM Data Science Professional Certificate',
-    issuer: 'IBM / Coursera',
-    date: 'Jan 2024',
-    credentialId: 'IBM-DS-XXXXXX',
-    link: '#',
+    title: 'Introduction to Data Analytics',
+    issuer: 'Coursera',
+    date: 'Sep 2025',
+    link: 'https://drive.google.com/file/d/1CnFuwkWMXjip5PcAOQCmCUg_c_yxA4Mx/view?usp=drive_link',
     badge: '🔵',
     color: 'from-indigo-500/20 to-violet-500/10 border-indigo-500/20',
   },
-  {
-    title: 'Deep Learning Specialization',
-    issuer: 'DeepLearning.AI / Coursera',
-    date: 'Sep 2023',
-    credentialId: 'DL-XXXXXX',
-    link: '#',
-    badge: '🤖',
-    color: 'from-violet-500/20 to-purple-500/10 border-violet-500/20',
-  },
 ];
-
-
 
 export function Certifications() {
   return (
@@ -46,9 +32,7 @@ export function Certifications() {
           Verified credentials from industry-leading platforms.
         </p>
       </div>
-
-      {/* Certifications grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
         {certifications.map((cert, i) => (
           <motion.div
             key={cert.title}
@@ -70,7 +54,7 @@ export function Certifications() {
             </div>
             <div className="flex items-center justify-between mt-auto pt-2 border-t border-white/10">
               <span className="text-xs text-gray-500 dark:text-gray-400">{cert.date}</span>
-              <a
+              
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"

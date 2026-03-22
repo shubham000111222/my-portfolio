@@ -6,24 +6,28 @@ import { useRef } from 'react';
 
 const skillCategories = [
   {
-    title: '💻 Programming',
-    skills: ['Python', 'R', 'SQL', 'JavaScript', 'Bash'],
+    title: '💻 Languages',
+    skills: ['Python', 'SQL'],
   },
   {
-    title: '🤖 ML / AI',
-    skills: ['Scikit-learn', 'TensorFlow', 'PyTorch', 'Keras', 'XGBoost', 'LangChain'],
+    title: '🤖 ML / DL',
+    skills: ['Scikit-learn', 'XGBoost', 'LightGBM', 'PyTorch', 'Keras', 'SHAP', 'EfficientNet'],
   },
   {
-    title: '📊 Data Analytics',
-    skills: ['Pandas', 'NumPy', 'Polars', 'Spark', 'dbt'],
+    title: '🧠 NLP & LLMs',
+    skills: ['HuggingFace Transformers', 'FinBERT', 'spaCy', 'NLTK'],
   },
   {
-    title: '📈 Visualization',
-    skills: ['Matplotlib', 'Seaborn', 'Plotly', 'Tableau', 'Power BI'],
+    title: '📊 Data Stack',
+    skills: ['Pandas', 'NumPy'],
   },
   {
-    title: '🛠 Tools & Platforms',
-    skills: ['Git', 'Docker', 'AWS', 'GCP', 'Jupyter', 'Airflow', 'MLflow'],
+    title: '📈 Visualisation',
+    skills: ['Streamlit', 'Plotly', 'Seaborn', 'Matplotlib'],
+  },
+  {
+    title: '🛠 MLOps & Deployment',
+    skills: ['Docker', 'FastAPI', 'PostgreSQL', 'Streamlit Cloud', 'HuggingFace Spaces', 'Vercel'],
   },
 ];
 
@@ -53,7 +57,6 @@ export function About() {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7 }}
       >
-        {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
             About <span className="gradient-text">Me</span>
@@ -64,12 +67,10 @@ export function About() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Professional Summary */}
           <div className="space-y-5">
             <h3 className="text-xl font-bold text-indigo-500 mb-2">Professional Summary</h3>
-            {/* PLACEHOLDER: Replace with your actual professional summary */}
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              I&apos;m a B.Tech Computer Science student with hands-on experience building
+              I&apos;m a B.Tech Computer Science student at NIT Delhi with hands-on experience building
               end-to-end ML pipelines, NLP systems, and data analytics solutions. I enjoy
               working across the full stack — from data ingestion and feature engineering
               to model training and deployment.
@@ -80,14 +81,14 @@ export function About() {
               All projects are open-source with live demos.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              Seeking a Data Science / ML internship where I can apply these skills to
+              Seeking a Data Science / ML / Data Analytics internship where I can apply these skills to
               real-world problems.
             </p>
 
             <div className="pt-4 grid grid-cols-2 gap-4">
               {[
                 { label: 'Projects', value: '8' },
-                { label: 'Certifications', value: '3' },
+                { label: 'Certifications', value: '2' },
               ].map((stat) => (
                 <div key={stat.label} className="glass rounded-xl p-4 text-center">
                   <p className="text-2xl font-extrabold gradient-text">{stat.value}</p>
@@ -97,7 +98,6 @@ export function About() {
             </div>
           </div>
 
-          {/* Skills */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-indigo-500 mb-2">Technical Skills</h3>
             {skillCategories.map((cat) => (

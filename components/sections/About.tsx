@@ -19,7 +19,7 @@ const skillCategories = [
   },
   {
     title: '📊 Data Stack',
-    skills: ['Pandas', 'NumPy'],
+    skills: ['Pandas', 'NumPy', 'SQLite'],
   },
   {
     title: '📈 Visualisation',
@@ -70,19 +70,19 @@ export function About() {
           <div className="space-y-5">
             <h3 className="text-xl font-bold text-indigo-500 mb-2">Professional Summary</h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              I&apos;m a B.Tech Computer Science student at NIT Delhi with hands-on experience building
-              end-to-end ML pipelines, NLP systems, and data analytics solutions. I enjoy
-              working across the full stack — from data ingestion and feature engineering
-              to model training and deployment.
+              I&apos;m a B.Tech Computer Science student at NIT Delhi with hands-on experience
+              building end-to-end ML pipelines, SQL analytics systems, and NLP applications
+              across telecom, finance, and sports domains. I enjoy working across the full stack
+              — from data ingestion and feature engineering to model training and deployment.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              I&apos;ve worked on projects spanning NLP, computer vision, time-series
-              forecasting, and tabular ML using datasets from finance, healthcare, and retail.
-              All projects are open-source with live demos.
+              I&apos;ve worked on projects spanning NLP, computer vision, time-series forecasting,
+              and tabular ML using real public datasets from finance, healthcare, retail,
+              telecom, and sports. All projects are open-source with live demos.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              Seeking a Data Science / ML / Data Analytics internship where I can apply these skills to
-              real-world problems.
+              Seeking a Data Science, ML, or Data Analytics internship where I can apply these
+              skills to real-world problems.
             </p>
 
             <div className="pt-4 grid grid-cols-2 gap-4">

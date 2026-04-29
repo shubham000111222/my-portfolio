@@ -13,13 +13,29 @@ const projects = [
       'Conducted feature engineering on a public telecom churn dataset. Built an ensemble model (XGBoost + LightGBM) with SHAP-based explainability to surface top churn drivers. Deployed via FastAPI with a real-time scoring endpoint.',
     stack: ['Python', 'XGBoost', 'LightGBM', 'SHAP', 'FastAPI', 'PostgreSQL', 'Docker'],
     results: [
-      'Model AUC: 0.94 on held-out test set',
-      'Real-time inference < 50ms via FastAPI',
+      'ROC-AUC: 0.717 on IBM Telco held-out test set (7,043 real records)',
+      'Recall: 64.2% on churn class with threshold-tuned decision boundary',
       'SHAP waterfall plots for per-customer explainability',
       'Dockerised and deployable end-to-end',
     ],
     github: 'https://github.com/shubham000111222/churn-prediction',
     demo: 'https://churn-prediction-grph4xyczphtcaaqfwdh3d.streamlit.app/',
+  },
+  {
+    title: 'IPL Analytics (2008–2024)',
+    emoji: '📊',
+    problem:
+      'Cricket franchises and analysts lack open tools for deep statistical analysis — player performance, team strategy, and win factors remain buried in raw ball-by-ball data.',
+    approach:
+      'Analysed 300K+ IPL deliveries using 20+ SQL window function queries (CTEs, ROW_NUMBER, LAG). Built KMeans clustering for player profiling, logistic regression win-probability model, and 20 visualisations covering phase-wise performance, matchup matrices, and toss strategy trends.',
+    stack: ['Python', 'SQL', 'SQLite', 'Pandas', 'Scikit-learn', 'Matplotlib', 'Seaborn', 'Streamlit'],
+    results: [
+      '✓ 20+ SQL queries: Orange Cap race, death over specialists, H2H win matrix',
+      '✓ KMeans clustering classifies batsmen as Anchors (Dhoni, Gambhir) vs Aggressors (Kohli, Rohit)',
+      '✓ Win probability model: 64.7% accuracy — top feature: powerplay wickets lost',
+      '✓ 8-page Streamlit dashboard: player comparison, match simulator, rivalry deep-dive',
+    ],
+    github: 'https://github.com/shubham000111222/IPL-analytics',
   },
   {
     title: 'NLP-Powered Financial Sentiment Analyser',
@@ -123,23 +139,6 @@ const projects = [
     github: 'https://github.com/shubham000111222/ai-mock-interviewer',
     demo: 'https://shubh10099-ai-mock-interviewer.hf.space',
   },
-  {
-    title: 'Real-Time Cricket Analytics Dashboard',
-    emoji: '🏏',
-    problem:
-      'Cricket fans and analysts lack a lightweight, open tool for ball-by-ball win probability and rich visual analytics.',
-    approach:
-      'Built a ball-by-ball IPL simulation engine with realistic outcome distributions. Trained a Logistic Regression win-probability model on 3,000 simulated innings using 10 engineered features (CRR, RRR, wickets-in-hand, pressure index, etc.). Pluggable CricAPI backend for real match data.',
-    stack: ['Python', 'scikit-learn', 'Streamlit', 'Plotly', 'Pandas', 'NumPy', 'CricAPI', 'Docker'],
-    results: [
-      'ML win probability model updating every ball',
-      '7 interactive Plotly charts in a single dashboard',
-      'Full two-innings simulation with match result',
-      'Zero-config offline mode + CricAPI live feed support',
-    ],
-    github: 'https://github.com/shubham000111222/cricket-analytics',
-    demo: 'https://shubh10099-cricket-analytics.hf.space',
-  },
 ];
 
 function ProjectCard({
@@ -194,7 +193,8 @@ function ProjectCard({
               key={r}
               className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-200"
             >
-              <span className="text-green-400 mt-0.5">✓</span> {r}
+              {r.startsWith('✓') ? null : <span className="text-green-400 mt-0.5">✓</span>}
+              {r}
             </li>
           ))}
         </ul>
